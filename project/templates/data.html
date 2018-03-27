@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+
+    <h1>Wave Bouy: Latest Data</h1>
+
+
+    <form action="{{ url_for('data') }}" method="post">
+        <fieldset>
+            <div class="form-group">
+                <select name="buoy" class="form-control">
+                    <option value="98">Looe Bay</option>
+                    <option value="75">Penzance</option>
+                    <option value="76">Perranporth</option>
+                    <option value="107">Porthleven</option>
+                    <option value="113">St Mary's</option>
+                    <option value="116">Wave Hub</option>
+                </select>
+                <button class="btn btn-default" type="submit">Get Latest Data</button>
+            </div>
+
+
+
+
+        </fieldset>
+    </form>
+
+    <br><br>
+
+
+
+{% endblock %}

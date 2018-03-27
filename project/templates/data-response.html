@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Data Repsonse
+{% endblock %}
+
+{% block main %}
+
+    <h1>{{ place }}: Latest Data</h1>
+    <div class="chart-container">
+        <canvas id="myChart" width="800px" height="400px"></canvas>
+    </div>
+    <h2>Latest Data</h2>
+
+    <div>
+    {{ tables[0]|safe }}
+    <div>
+
+    <div id="map"></div>
+
+
+
+
+{% endblock %}

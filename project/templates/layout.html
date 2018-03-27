@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta -->
+        <meta charset="utf-8"/>
+        <meta content="initial-scale=1, width=device-width" name="viewport"/>
+
+        <!-- documentation at http://getbootstrap.com/, alternative themes at https://www.bootstrapcdn.com/bootswatch/ -->
+        <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet"/>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+
+
+
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
+
+
+
+        <title>Ocean Data: {% block title %}{% endblock %}</title>
+
+    </head>
+
+    <body>
+
+        <div class="container">
+
+
+            <main>
+                {% block main %}{% endblock %}
+            </main>
+
+        </div>
+
+
+
+
+
+<script>
+
+var slideIndex = 1;
+showSlides(slideIndex);
+            
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+            
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+            
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+}
+</script>
+
+<script>
+
+var ctx = document.getElementById("myChart").getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: [{% for item in labels %}"{{item}}",{% endfor %}],
+        datasets: [{
+            label: 'Wave Height (m)',
+            borderWidth: 3,
+
+            data: [{% for item in values %}{{item}},{% endfor %}
+            ]
+
+        }, {
+            label: 'Max Wave Height (m)',
+
+            borderWidth: 3,
+            data: [{% for item in v_max %}{{item}},{% endfor %}
+            ]
+
+        }]
+    },
+    options: {
+        scales: {
+            xAxes: [{
+                stacked: false
+            }],
+            yAxes: [{
+                stacked: false
+            }]
+        }
+    }
+});
+
+
+</script>
+<script>
+      function initMap() {
+        var myLatLon = {lat: {{ lat }}, lng: {{ lon}}};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 12,
+          center: myLatLon
+        });
+
+
+
+        var contentString = '<p>{{ place }}</p>';
+
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+
+
+        var marker = new google.maps.Marker({
+          position: myLatLon,
+          map: map
+        });
+
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+
+      }
+    </script>
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTv_5kytpdJ-oqwT6l8eAHdlx-GopcqFU&callback=initMap">
+</script>
+
+
+</body>
+</html>

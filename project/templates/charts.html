@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Charts
+{% endblock %}
+
+{% block main %}
+
+    <h1>NE Atlantic: Latest Wind and Wave Charts</h1>
+    
+    <div class="slideshow-container">
+        
+        <div class="mySlides">
+            <img src="{{ url_for('static', filename='charts/NE_Atl_T0.png') }}">
+            <div class="text">{{t}} 00:00</div>
+        </div>
+        
+        <div class="mySlides">
+            <img src="{{ url_for('static', filename='charts/NE_Atl_T1.png') }}">
+            <div class="text">{{t}} 03:00</div>
+        </div>
+        
+        <div class="mySlides">
+            <img src="{{ url_for('static', filename='charts/NE_Atl_T2.png') }}">
+            <div class="text">{{t}} 06:00</div>
+        </div>
+
+        <div class="mySlides">
+            <img src="{{ url_for('static', filename='charts/NE_Atl_T3.png') }}">
+            <div class="text">{{t}} 09:00</div>
+        </div>
+
+        <div class="mySlides">
+            <img src="{{ url_for('static', filename='charts/NE_Atl_T4.png') }}">
+            <div class="text">{{t}} 12:00</div>
+        </div>
+
+        <div class="mySlides">
+            <img src="{{ url_for('static', filename='charts/NE_Atl_T5.png') }}">
+            <div class="text">{{t}} 15:00</div>
+        </div>
+
+        <div class="mySlides">
+            <img src="{{ url_for('static', filename='charts/NE_Atl_T6.png') }}">
+            <div class="text">{{t}} 18:00</div>
+        </div>
+
+        <div class="mySlides">
+            <img src="{{ url_for('static', filename='charts/NE_Atl_T7.png') }}">
+            <div class="text">{{t}} 21:00</div>
+        </div>
+
+        
+        
+     
+        
+    </div>
+        <br>
+        
+        <div style="text-align:center">
+            <span class="dot" onmouseover="currentSlide(1)"></span> 
+            <span class="dot" onmouseover="currentSlide(2)"></span> 
+            <span class="dot" onmouseover="currentSlide(3)"></span>
+            <span class="dot" onmouseover="currentSlide(4)"></span> 
+            <span class="dot" onmouseover="currentSlide(5)"></span> 
+            <span class="dot" onmouseover="currentSlide(6)"></span> 
+            <span class="dot" onmouseover="currentSlide(7)"></span> 
+            <span class="dot" onmouseover="currentSlide(8)"></span> 
+        </div>
+        
+    <br><br>
+   
+
+
+
+
+
+{% endblock %}

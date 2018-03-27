@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+
+    <h1>Ocean Data: About</h1>
+    <br>
+    <br>
+    <p>The Ocean Data app pulls live data from metocean monitoring stations around south west England, UK. Data is provided by <a ref="http://www.channelcoast.org">Channel Coast Oberservatory</a></p>
+
+    <p>Forecast chart data is pulled from the <a ref="http://nomads.ncep.noaa.gov:9090/dods/wave/nww3/">NOAA Wavewatch III</a> server and processed in python using matplotlib.</p>
+
+    <p>Interactive charts were created using the opensource JS library <a ref="www.chartjs.org">www.chartjs.org</a></p>
+{% endblock %}
