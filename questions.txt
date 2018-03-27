@@ -1,0 +1,4 @@
+0. Allows frameworks of bewteen "3x3" and "9x9"
+1. Board represented in an array data structure
+2. The greet() fucntion is called at the start
+3. Need to implement the following functions: init(), draw(), move(), won()
