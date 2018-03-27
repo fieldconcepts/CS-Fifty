@@ -1,0 +1,15 @@
+0.  A very long word, 45 chars long, the max our program will be able to check.
+1.  Returns the struct containing the usage stats of the prgram unclusing CPU time, emory usage etc.
+2.  16 members in the struct
+3.  
+4.  Once the file has been opened in read mode it iterates through each charcter in the text
+    int c is initialised as the first character in file and the loop continues to iterate until c
+    reaches the End OF File character. Each charcter is check if it is alphabetical and if it passes
+    then it is added to a word array at index i. The word array is checked to make sure its length
+    does not exceed 45, the max word length for this program. if it exceed 45 then the loop continues
+    to the end of this particular word and reset the index to 0 at the end, marking a new word found.
+    if a number is found within the word then the same, loop conitunes through the rest of the word 
+    until end of word. If full word is found that is valid, increase the word counter and check for 
+    mispelling by calling check() fucntion. rest index zero for next work in text.
+5.  TODO
+6.  TODO
