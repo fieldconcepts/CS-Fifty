@@ -1,0 +1,12 @@
+1.  stdint.h file is a header file in the stnadrad library that specifies a set of typedifs for integrers with exact widths, MIN and MAx values.
+2.  Signed and unsigned interger types of fixed widths as defined by the stdint.h header file. This prevents errors when code is ported from a eg. a 16bit vchaine to a 32bit machine.
+3.  BYTE=1bytes, DWORD=4bytes, LONG=4bytes, WORD=2bytes
+4.  Hexdecimnal = 0x4d42
+5.  bfSize = total size of the bitmap file including headers, pixels, padding (in bytes). biSize = size of the BITMAPINFOHEADER struct (in this case 40 bytes). 
+6.  If biHeight is negative then the bitmap is top-down DIB and its origin is in the upper-left corner.
+7.  biBitCount specifiess the bitmap color depth or Bits Per Pixel.
+8.  fopen will return a NULL if the file does not exist.
+9.  the "1" means read 1 time from the streams pointed by the inptr the data size sizeof(BITMAPFILEHEADER) ansd store to memory address of the variable bf
+10. padding = 1
+11. fseek is a fucntion used to set the file position indicatoor for the stream to a new postion. In this case it take the file stream, moves the postion indicator by amount of padding, and SEEK_CUR is the postion at which it should start offsetting (current)
+12. SEEK_CUR is the current position of the pointer.
