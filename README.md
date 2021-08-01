@@ -4,4 +4,7 @@ CS50 Course completed in December 2017 Final project was the Brinecast - a surf 
 https://youtu.be/xTpMyth9zyo
 
 ![Screenshot 1](https://github.com/fieldconcepts/CS-Fifty/blob/master/project/screenshots/Screen%20Shot%202021-08-01%20at%2015.25.41.png)
+![Screenshot 2](https://github.com/fieldconcepts/CS-Fifty/blob/master/project/screenshots/Screen%20Shot%202021-08-01%20at%2015.25.57.png)
+![Screenshot 3](https://github.com/fieldconcepts/CS-Fifty/blob/master/project/screenshots/Screen%20Shot%202021-08-01%20at%2015.25.58.png)
+![Screenshot 4](https://github.com/fieldconcepts/CS-Fifty/blob/master/project/screenshots/Screen%20Shot%202021-08-01%20at%2015.33.22.png)
 
